@@ -13,6 +13,10 @@
 		C086337128606FDE00AF3F96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C086336F28606FDE00AF3F96 /* Main.storyboard */; };
 		C086337328606FDF00AF3F96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C086337228606FDF00AF3F96 /* Assets.xcassets */; };
 		C086337628606FDF00AF3F96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C086337428606FDF00AF3F96 /* LaunchScreen.storyboard */; };
+		C086337E286071D400AF3F96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C086337D286071D400AF3F96 /* GoogleService-Info.plist */; };
+		C08633812860726300AF3F96 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C08633802860726300AF3F96 /* FirebaseAnalytics */; };
+		C08633832860726300AF3F96 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C08633822860726300AF3F96 /* FirebaseAuth */; };
+		C08633852860726300AF3F96 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C08633842860726300AF3F96 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,7 @@
 		C086337228606FDF00AF3F96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C086337528606FDF00AF3F96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C086337728606FDF00AF3F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C086337D286071D400AF3F96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C08633812860726300AF3F96 /* FirebaseAnalytics in Frameworks */,
+				C08633832860726300AF3F96 /* FirebaseAuth in Frameworks */,
+				C08633852860726300AF3F96 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +71,7 @@
 				C086337228606FDF00AF3F96 /* Assets.xcassets */,
 				C086337428606FDF00AF3F96 /* LaunchScreen.storyboard */,
 				C086337728606FDF00AF3F96 /* Info.plist */,
+				C086337D286071D400AF3F96 /* GoogleService-Info.plist */,
 			);
 			path = SmarTravel;
 			sourceTree = "<group>";
@@ -83,6 +92,11 @@
 			dependencies = (
 			);
 			name = SmarTravel;
+			packageProductDependencies = (
+				C08633802860726300AF3F96 /* FirebaseAnalytics */,
+				C08633822860726300AF3F96 /* FirebaseAuth */,
+				C08633842860726300AF3F96 /* FirebaseFirestore */,
+			);
 			productName = SmarTravel;
 			productReference = C086336628606FDE00AF3F96 /* SmarTravel.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = C086335D28606FDE00AF3F96;
+			packageReferences = (
+				C086337F2860726300AF3F96 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C086336728606FDE00AF3F96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C086337628606FDF00AF3F96 /* LaunchScreen.storyboard in Resources */,
+				C086337E286071D400AF3F96 /* GoogleService-Info.plist in Resources */,
 				C086337328606FDF00AF3F96 /* Assets.xcassets in Resources */,
 				C086337128606FDE00AF3F96 /* Main.storyboard in Resources */,
 			);
@@ -356,6 +374,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C086337F2860726300AF3F96 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C08633802860726300AF3F96 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C086337F2860726300AF3F96 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		C08633822860726300AF3F96 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C086337F2860726300AF3F96 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C08633842860726300AF3F96 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C086337F2860726300AF3F96 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C086335E28606FDE00AF3F96 /* Project object */;
 }
