@@ -88,3 +88,19 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+
+# Google Services (ex. APIs and Firebase)
+google-services.json
+GoogleService-Info.plist
+
+# Firebase Hosting
+.firebaserc
+firebase-debug.log
+
+# Build generated
+build/
+DerivedData/
+
+# CocoaPods
+Pods/
