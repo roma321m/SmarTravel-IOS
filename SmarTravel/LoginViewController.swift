@@ -1,14 +1,7 @@
-//
-//  ViewController.swift
-//  SmarTravel
-//
-//  Created by user216779 on 6/20/22.
-//
-
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     // MARK: - UI element diclaration
     
@@ -28,10 +21,13 @@ class ViewController: UIViewController {
         
         // SetupView
         setupView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        // Logic
         if FirebaseAuth.Auth.auth().currentUser != nil {
-            logIn()
+            self.logIn()
         }
     }
     
@@ -87,19 +83,10 @@ class ViewController: UIViewController {
     
     func logIn() {
         print("You have signed in")
-        // TODO: move to main screen
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "main_vc") as! UINavigationController
+        self.present(mainVC, animated: false, completion: nil)
     }
-    
-    /* FIXME: needs to be in the main scrren
-    func logOut() {
-        do {
-            try FirebaseAuth.Auth.auth().signOut()
-            // TODO: lunch login screen
-        }
-        catch {
-            print("An error occurred when logging out")
-        }
-    }*/
     
     func showCreateAccount() {
         print("Create new account")

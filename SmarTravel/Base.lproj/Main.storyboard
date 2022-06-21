@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmarTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login_vc" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="SmarTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +83,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="96"/>
+            <point key="canvasLocation" x="141" y="96"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="XfO-rf-ZWp">
+            <objects>
+                <viewController storyboardIdentifier="trips_vc" modalPresentationStyle="fullScreen" id="fgZ-fX-O5S" customClass="MainViewController" customModule="SmarTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3YU-k1-MhM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yF9-59-e6o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xak-Hn-gV4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ShD-pk-3pf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.913043478261" y="95.758928571428569"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="vhd-Qg-2ik">
+            <objects>
+                <viewController storyboardIdentifier="settings_vc" id="u2E-EJ-WT7" customClass="SettingsViewController" customModule="SmarTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x8C-3N-Vwj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gAk-ef-sc9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EIo-uP-jXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2491" y="96"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tar-xz-2lO">
+            <objects>
+                <navigationController storyboardIdentifier="main_vc" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="sy8-52-zyO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bqT-Fa-zvt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fgZ-fX-O5S" kind="relationship" relationship="rootViewController" id="gJU-j2-VGO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rpc-o1-yaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863.768115942029" y="95.758928571428569"/>
         </scene>
     </scenes>
     <resources>

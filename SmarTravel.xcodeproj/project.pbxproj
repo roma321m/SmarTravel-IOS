@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C056C1BC2862021000265E88 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056C1BB2862021000265E88 /* SettingsViewController.swift */; };
+		C061245B2861F0AF0096DC88 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061245A2861F0AF0096DC88 /* MainViewController.swift */; };
 		C086336A28606FDE00AF3F96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086336928606FDE00AF3F96 /* AppDelegate.swift */; };
 		C086336C28606FDE00AF3F96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086336B28606FDE00AF3F96 /* SceneDelegate.swift */; };
-		C086336E28606FDE00AF3F96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086336D28606FDE00AF3F96 /* ViewController.swift */; };
+		C086336E28606FDE00AF3F96 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086336D28606FDE00AF3F96 /* LoginViewController.swift */; };
 		C086337128606FDE00AF3F96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C086336F28606FDE00AF3F96 /* Main.storyboard */; };
 		C086337328606FDF00AF3F96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C086337228606FDF00AF3F96 /* Assets.xcassets */; };
 		C086337628606FDF00AF3F96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C086337428606FDF00AF3F96 /* LaunchScreen.storyboard */; };
@@ -20,10 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C056C1BB2862021000265E88 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C061245A2861F0AF0096DC88 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C086336628606FDE00AF3F96 /* SmarTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmarTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C086336928606FDE00AF3F96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C086336B28606FDE00AF3F96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C086336D28606FDE00AF3F96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C086336D28606FDE00AF3F96 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C086337028606FDE00AF3F96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C086337228606FDF00AF3F96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C086337528606FDF00AF3F96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,7 +72,9 @@
 				C086338628607D6500AF3F96 /* SmarTravelDebug.entitlements */,
 				C086336928606FDE00AF3F96 /* AppDelegate.swift */,
 				C086336B28606FDE00AF3F96 /* SceneDelegate.swift */,
-				C086336D28606FDE00AF3F96 /* ViewController.swift */,
+				C086336D28606FDE00AF3F96 /* LoginViewController.swift */,
+				C056C1BB2862021000265E88 /* SettingsViewController.swift */,
+				C061245A2861F0AF0096DC88 /* MainViewController.swift */,
 				C086336F28606FDE00AF3F96 /* Main.storyboard */,
 				C086337228606FDF00AF3F96 /* Assets.xcassets */,
 				C086337428606FDF00AF3F96 /* LaunchScreen.storyboard */,
@@ -158,9 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C086336E28606FDE00AF3F96 /* ViewController.swift in Sources */,
+				C086336E28606FDE00AF3F96 /* LoginViewController.swift in Sources */,
 				C086336A28606FDE00AF3F96 /* AppDelegate.swift in Sources */,
 				C086336C28606FDE00AF3F96 /* SceneDelegate.swift in Sources */,
+				C056C1BC2862021000265E88 /* SettingsViewController.swift in Sources */,
+				C061245B2861F0AF0096DC88 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
