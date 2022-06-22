@@ -1,6 +1,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    //MARK: - View life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,6 +12,8 @@ class MainViewController: UIViewController {
         
         configureItems()
     }
+    
+    //MARK: - View methods
 
     private func configureItems() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(

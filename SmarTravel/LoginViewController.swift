@@ -11,6 +11,8 @@ class LoginViewController: UIViewController {
     
     var login_Alert_newAccount: UIAlertController!
     
+    // MARK: - global variables diclaration
+    
     var loginEmail:String!
     var loginPassword:String!
     
@@ -21,14 +23,6 @@ class LoginViewController: UIViewController {
         
         // SetupView
         setupView()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if FirebaseAuth.Auth.auth().currentUser != nil {
-            self.logIn()
-        }
     }
     
     //MARK: - View methods

@@ -2,6 +2,8 @@ import UIKit
 import FirebaseAuth
 
 class SettingsViewController: UIViewController {
+    
+    // MARK: - View life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,6 +13,8 @@ class SettingsViewController: UIViewController {
         
         configureItems()
     }
+    
+    //MARK: - View methods
 
     private func configureItems() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(

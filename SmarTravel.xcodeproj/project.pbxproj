@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		C056C1BC2862021000265E88 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056C1BB2862021000265E88 /* SettingsViewController.swift */; };
 		C061245B2861F0AF0096DC88 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061245A2861F0AF0096DC88 /* MainViewController.swift */; };
+		C0814A1D2863093F0085AB3F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0814A1C2863093F0085AB3F /* OnboardingViewController.swift */; };
+		C0814A2028630ED60085AB3F /* UIView extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0814A1F28630ED60085AB3F /* UIView extensions.swift */; };
+		C0814A22286310140085AB3F /* OnBoardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0814A21286310140085AB3F /* OnBoardingSlide.swift */; };
+		C0814A24286313150085AB3F /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0814A23286313150085AB3F /* OnboardingCollectionViewCell.swift */; };
 		C086336A28606FDE00AF3F96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086336928606FDE00AF3F96 /* AppDelegate.swift */; };
 		C086336C28606FDE00AF3F96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086336B28606FDE00AF3F96 /* SceneDelegate.swift */; };
 		C086336E28606FDE00AF3F96 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086336D28606FDE00AF3F96 /* LoginViewController.swift */; };
@@ -24,6 +28,10 @@
 /* Begin PBXFileReference section */
 		C056C1BB2862021000265E88 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C061245A2861F0AF0096DC88 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C0814A1C2863093F0085AB3F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		C0814A1F28630ED60085AB3F /* UIView extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView extensions.swift"; sourceTree = "<group>"; };
+		C0814A21286310140085AB3F /* OnBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlide.swift; sourceTree = "<group>"; };
+		C0814A23286313150085AB3F /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		C086336628606FDE00AF3F96 /* SmarTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmarTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C086336928606FDE00AF3F96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C086336B28606FDE00AF3F96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +58,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0814A19286308BA0085AB3F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0814A21286310140085AB3F /* OnBoardingSlide.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C0814A1A286308DD0085AB3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0814A1B286309080085AB3F /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0814A1B286309080085AB3F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C0814A1C2863093F0085AB3F /* OnboardingViewController.swift */,
+				C0814A23286313150085AB3F /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C0814A1E28630E9C0085AB3F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0814A1F28630ED60085AB3F /* UIView extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C086335D28606FDE00AF3F96 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +110,9 @@
 		C086336828606FDE00AF3F96 /* SmarTravel */ = {
 			isa = PBXGroup;
 			children = (
+				C0814A1E28630E9C0085AB3F /* Extensions */,
+				C0814A1A286308DD0085AB3F /* Views */,
+				C0814A19286308BA0085AB3F /* Models */,
 				C086338628607D6500AF3F96 /* SmarTravelDebug.entitlements */,
 				C086336928606FDE00AF3F96 /* AppDelegate.swift */,
 				C086336B28606FDE00AF3F96 /* SceneDelegate.swift */,
@@ -165,10 +209,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C086336E28606FDE00AF3F96 /* LoginViewController.swift in Sources */,
+				C0814A1D2863093F0085AB3F /* OnboardingViewController.swift in Sources */,
 				C086336A28606FDE00AF3F96 /* AppDelegate.swift in Sources */,
 				C086336C28606FDE00AF3F96 /* SceneDelegate.swift in Sources */,
+				C0814A22286310140085AB3F /* OnBoardingSlide.swift in Sources */,
 				C056C1BC2862021000265E88 /* SettingsViewController.swift in Sources */,
 				C061245B2861F0AF0096DC88 /* MainViewController.swift in Sources */,
+				C0814A2028630ED60085AB3F /* UIView extensions.swift in Sources */,
+				C0814A24286313150085AB3F /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
