@@ -41,6 +41,8 @@ class OnboardingViewController: UIViewController {
                   OnBoardingSlide(title: "The Third Title Here",
                                   description: "Description of the third page will be here!",
                                   image: #imageLiteral(resourceName: "logo2"))]
+        
+        pageControl.numberOfPages = slides.count
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,6 +59,7 @@ class OnboardingViewController: UIViewController {
         if currentPage == slides.count - 1 {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             if let loginVC = mainStoryboard.instantiateViewController(withIdentifier: "login_vc") as? LoginViewController {
+                loginVC.modalTransitionStyle = .flipHorizontal
                 self.present(loginVC, animated: true, completion: nil)
             }
         } else {

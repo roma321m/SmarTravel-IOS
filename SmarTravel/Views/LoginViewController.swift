@@ -79,7 +79,7 @@ class LoginViewController: UIViewController {
         print("You have signed in")
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "main_vc") as! UINavigationController
-        self.present(mainVC, animated: false, completion: nil)
+        self.present(mainVC, animated: true, completion: nil)
     }
     
     func showCreateAccount() {
