@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C04CF30E2865D3D5000F4A68 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF30D2865D3D5000F4A68 /* TripDetailViewController.swift */; };
-		C04CF3112865D890000F4A68 /* UIViewController Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF3102865D890000F4A68 /* UIViewController Extension.swift */; };
+		C04CF3112865D890000F4A68 /* UIViewController extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF3102865D890000F4A68 /* UIViewController extension.swift */; };
 		C04CF3162865E3CA000F4A68 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF3142865E3CA000F4A68 /* PopularCollectionViewCell.swift */; };
 		C04CF3172865E3CA000F4A68 /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04CF3152865E3CA000F4A68 /* PopularCollectionViewCell.xib */; };
 		C04CF3192865E614000F4A68 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF3182865E614000F4A68 /* Trip.swift */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		C04CF30D2865D3D5000F4A68 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
-		C04CF3102865D890000F4A68 /* UIViewController Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController Extension.swift"; sourceTree = "<group>"; };
+		C04CF3102865D890000F4A68 /* UIViewController extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController extension.swift"; sourceTree = "<group>"; };
 		C04CF3142865E3CA000F4A68 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		C04CF3152865E3CA000F4A68 /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
 		C04CF3182865E614000F4A68 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 			children = (
 				C0814A1F28630ED60085AB3F /* UIView Extensions.swift */,
 				C0814A34286364C50085AB3F /* String Extensions.swift */,
-				C04CF3102865D890000F4A68 /* UIViewController Extension.swift */,
+				C04CF3102865D890000F4A68 /* UIViewController extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 			files = (
 				C086336E28606FDE00AF3F96 /* LoginViewController.swift in Sources */,
 				C0814A1D2863093F0085AB3F /* OnboardingViewController.swift in Sources */,
-				C04CF3112865D890000F4A68 /* UIViewController Extension.swift in Sources */,
+				C04CF3112865D890000F4A68 /* UIViewController extension.swift in Sources */,
 				C086336A28606FDE00AF3F96 /* AppDelegate.swift in Sources */,
 				C04CF3162865E3CA000F4A68 /* PopularCollectionViewCell.swift in Sources */,
 				C086336C28606FDE00AF3F96 /* SceneDelegate.swift in Sources */,
