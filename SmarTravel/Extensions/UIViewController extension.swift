@@ -1,6 +1,5 @@
 import UIKit
 
-
 // This extension gives easy way to move between pages in the main storyboard
 extension UIViewController {
     

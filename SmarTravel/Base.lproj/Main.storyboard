@@ -502,7 +502,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Tar-xz-2lO">
             <objects>
-                <navigationController storyboardIdentifier="main_nc" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="sy8-52-zyO" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UINavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="sy8-52-zyO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bqT-Fa-zvt">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
