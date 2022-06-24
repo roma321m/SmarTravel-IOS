@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C04CF30E2865D3D5000F4A68 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF30D2865D3D5000F4A68 /* TripDetailViewController.swift */; };
 		C056C1BC2862021000265E88 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056C1BB2862021000265E88 /* SettingsViewController.swift */; };
 		C061245B2861F0AF0096DC88 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061245A2861F0AF0096DC88 /* HomeViewController.swift */; };
 		C0814A1D2863093F0085AB3F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0814A1C2863093F0085AB3F /* OnboardingViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C04CF30D2865D3D5000F4A68 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
 		C056C1BB2862021000265E88 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C061245A2861F0AF0096DC88 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C0814A1C2863093F0085AB3F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C04CF30C2865D390000F4A68 /* TripDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C04CF30D2865D3D5000F4A68 /* TripDetailViewController.swift */,
+			);
+			path = TripDetail;
+			sourceTree = "<group>";
+		};
+		C04CF30F2865D65F000F4A68 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C086336D28606FDE00AF3F96 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		C0814A19286308BA0085AB3F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +100,10 @@
 		C0814A1A286308DD0085AB3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C04CF30F2865D65F000F4A68 /* Login */,
+				C04CF30C2865D390000F4A68 /* TripDetail */,
 				C0814A25286351920085AB3F /* Home */,
 				C0814A1B286309080085AB3F /* Onboarding */,
-				C086336D28606FDE00AF3F96 /* LoginViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +295,7 @@
 				C0814A35286364C50085AB3F /* String Extensions.swift in Sources */,
 				C056C1BC2862021000265E88 /* SettingsViewController.swift in Sources */,
 				C0814A38286370C50085AB3F /* CardView.swift in Sources */,
+				C04CF30E2865D3D5000F4A68 /* TripDetailViewController.swift in Sources */,
 				C061245B2861F0AF0096DC88 /* HomeViewController.swift in Sources */,
 				C0814A30286361EB0085AB3F /* Country.swift in Sources */,
 				C0814A2D28635FE80085AB3F /* CountriesCollectionViewCell.swift in Sources */,

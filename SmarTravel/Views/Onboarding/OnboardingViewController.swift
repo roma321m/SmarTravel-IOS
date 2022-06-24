@@ -74,7 +74,7 @@ class OnboardingViewController: UIViewController {
     func logIn() {
         print("You have signed in")
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "main_vc") as! UINavigationController
+        let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "main_nc") as! UINavigationController
         self.present(mainVC, animated: false, completion: nil)
     }
 }
