@@ -3,11 +3,12 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var countriesCollectionView: UICollectionView!
-    
     @IBOutlet weak var popularCollectionView: UICollectionView!
+    @IBOutlet weak var soldOutCollectionView: UICollectionView!
     
     var countries: [Country] = []
     var trips: [Trip] = []
+    var soldOut: [Trip] = []
     
     //MARK: - View life cycle
 
@@ -18,6 +19,7 @@ class HomeViewController: UIViewController {
         
         countries = Countries.countries // TODO: get this from API
         trips = Trips.trips // TODO: get from API
+        soldOut = Trips.trips // TODO: get from API
     }
     
     private func initCollectionViews() {
@@ -25,6 +27,8 @@ class HomeViewController: UIViewController {
         countriesCollectionView.dataSource = self
         popularCollectionView.delegate = self
         popularCollectionView.dataSource = self
+        soldOutCollectionView.delegate = self
+        soldOutCollectionView.dataSource = self
         
         registerCells()
     }
@@ -32,6 +36,7 @@ class HomeViewController: UIViewController {
     private func registerCells(){
         countriesCollectionView.register(UINib(nibName: CountriesCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CountriesCollectionViewCell.identifier)
         popularCollectionView.register(UINib(nibName: PopularCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PopularCollectionViewCell.identifier)
+        soldOutCollectionView.register(UINib(nibName: SoldOutCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: SoldOutCollectionViewCell.identifier)
     }
 }
 
@@ -43,6 +48,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return countries.count
         case popularCollectionView:
             return trips.count
+        case soldOutCollectionView:
+            return soldOut.count
         default: return 0
         }
     }
@@ -56,6 +63,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case popularCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.identifier, for: indexPath) as! PopularCollectionViewCell
             cell.setup(trips[indexPath.row])
+            return cell
+        case soldOutCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SoldOutCollectionViewCell.identifier, for: indexPath) as! SoldOutCollectionViewCell
+            cell.setup(soldOut[indexPath.row])
             return cell
         default: return UICollectionViewCell()
         }

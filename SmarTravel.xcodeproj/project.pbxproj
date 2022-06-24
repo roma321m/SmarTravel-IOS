@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C04CF30E2865D3D5000F4A68 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF30D2865D3D5000F4A68 /* TripDetailViewController.swift */; };
-		C04CF3112865D890000F4A68 /* UIViewControoler extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF3102865D890000F4A68 /* UIViewControoler extension.swift */; };
+		C04CF3112865D890000F4A68 /* UIViewController Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF3102865D890000F4A68 /* UIViewController Extension.swift */; };
 		C04CF3162865E3CA000F4A68 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF3142865E3CA000F4A68 /* PopularCollectionViewCell.swift */; };
 		C04CF3172865E3CA000F4A68 /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04CF3152865E3CA000F4A68 /* PopularCollectionViewCell.xib */; };
 		C04CF3192865E614000F4A68 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF3182865E614000F4A68 /* Trip.swift */; };
+		C04CF31F2865F10F000F4A68 /* SoldOutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF31D2865F10F000F4A68 /* SoldOutCollectionViewCell.swift */; };
+		C04CF3202865F10F000F4A68 /* SoldOutCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04CF31E2865F10F000F4A68 /* SoldOutCollectionViewCell.xib */; };
 		C056C1BC2862021000265E88 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056C1BB2862021000265E88 /* SettingsViewController.swift */; };
 		C061245B2861F0AF0096DC88 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061245A2861F0AF0096DC88 /* HomeViewController.swift */; };
 		C0814A1D2863093F0085AB3F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0814A1C2863093F0085AB3F /* OnboardingViewController.swift */; };
@@ -38,10 +40,12 @@
 
 /* Begin PBXFileReference section */
 		C04CF30D2865D3D5000F4A68 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
-		C04CF3102865D890000F4A68 /* UIViewControoler extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControoler extension.swift"; sourceTree = "<group>"; };
+		C04CF3102865D890000F4A68 /* UIViewController Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController Extension.swift"; sourceTree = "<group>"; };
 		C04CF3142865E3CA000F4A68 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		C04CF3152865E3CA000F4A68 /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
 		C04CF3182865E614000F4A68 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		C04CF31D2865F10F000F4A68 /* SoldOutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoldOutCollectionViewCell.swift; sourceTree = "<group>"; };
+		C04CF31E2865F10F000F4A68 /* SoldOutCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoldOutCollectionViewCell.xib; sourceTree = "<group>"; };
 		C056C1BB2862021000265E88 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C061245A2861F0AF0096DC88 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C0814A1C2863093F0085AB3F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +117,15 @@
 			path = PopularCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		C04CF31A2865F0AD000F4A68 /* SoldOutCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C04CF31D2865F10F000F4A68 /* SoldOutCollectionViewCell.swift */,
+				C04CF31E2865F10F000F4A68 /* SoldOutCollectionViewCell.xib */,
+			);
+			path = SoldOutCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		C0814A19286308BA0085AB3F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +162,7 @@
 			children = (
 				C0814A1F28630ED60085AB3F /* UIView Extensions.swift */,
 				C0814A34286364C50085AB3F /* String Extensions.swift */,
-				C04CF3102865D890000F4A68 /* UIViewControoler extension.swift */,
+				C04CF3102865D890000F4A68 /* UIViewController Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,6 +187,7 @@
 		C0814A2728635EF70085AB3F /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C04CF31A2865F0AD000F4A68 /* SoldOutCollectionViewCell */,
 				C04CF3132865E26F000F4A68 /* PopularCollectionViewCell */,
 				C0814A2828635F420085AB3F /* CountriesCollectionViewCell */,
 			);
@@ -300,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04CF3202865F10F000F4A68 /* SoldOutCollectionViewCell.xib in Resources */,
 				C086337628606FDF00AF3F96 /* LaunchScreen.storyboard in Resources */,
 				C0814A2E28635FE80085AB3F /* CountriesCollectionViewCell.xib in Resources */,
 				C086337E286071D400AF3F96 /* GoogleService-Info.plist in Resources */,
@@ -318,13 +333,14 @@
 			files = (
 				C086336E28606FDE00AF3F96 /* LoginViewController.swift in Sources */,
 				C0814A1D2863093F0085AB3F /* OnboardingViewController.swift in Sources */,
-				C04CF3112865D890000F4A68 /* UIViewControoler extension.swift in Sources */,
+				C04CF3112865D890000F4A68 /* UIViewController Extension.swift in Sources */,
 				C086336A28606FDE00AF3F96 /* AppDelegate.swift in Sources */,
 				C04CF3162865E3CA000F4A68 /* PopularCollectionViewCell.swift in Sources */,
 				C086336C28606FDE00AF3F96 /* SceneDelegate.swift in Sources */,
 				C0814A22286310140085AB3F /* OnBoardingSlide.swift in Sources */,
 				C0814A35286364C50085AB3F /* String Extensions.swift in Sources */,
 				C056C1BC2862021000265E88 /* SettingsViewController.swift in Sources */,
+				C04CF31F2865F10F000F4A68 /* SoldOutCollectionViewCell.swift in Sources */,
 				C0814A38286370C50085AB3F /* CardView.swift in Sources */,
 				C04CF30E2865D3D5000F4A68 /* TripDetailViewController.swift in Sources */,
 				C061245B2861F0AF0096DC88 /* HomeViewController.swift in Sources */,
