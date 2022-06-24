@@ -6,6 +6,7 @@ struct Country {
     let image: String
 }
 
+// FIXME: this is a temp data for the tests, need to get from the API
 class Countries {
     static var countries :[Country] = [.init(id: "id1",
                                              name: "Brazil",

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C04CF30E2865D3D5000F4A68 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF30D2865D3D5000F4A68 /* TripDetailViewController.swift */; };
+		C04CF3112865D890000F4A68 /* UIViewControoler extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF3102865D890000F4A68 /* UIViewControoler extension.swift */; };
+		C04CF3162865E3CA000F4A68 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF3142865E3CA000F4A68 /* PopularCollectionViewCell.swift */; };
+		C04CF3172865E3CA000F4A68 /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04CF3152865E3CA000F4A68 /* PopularCollectionViewCell.xib */; };
+		C04CF3192865E614000F4A68 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04CF3182865E614000F4A68 /* Trip.swift */; };
 		C056C1BC2862021000265E88 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C056C1BB2862021000265E88 /* SettingsViewController.swift */; };
 		C061245B2861F0AF0096DC88 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C061245A2861F0AF0096DC88 /* HomeViewController.swift */; };
 		C0814A1D2863093F0085AB3F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0814A1C2863093F0085AB3F /* OnboardingViewController.swift */; };
@@ -34,6 +38,10 @@
 
 /* Begin PBXFileReference section */
 		C04CF30D2865D3D5000F4A68 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
+		C04CF3102865D890000F4A68 /* UIViewControoler extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControoler extension.swift"; sourceTree = "<group>"; };
+		C04CF3142865E3CA000F4A68 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		C04CF3152865E3CA000F4A68 /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
+		C04CF3182865E614000F4A68 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		C056C1BB2862021000265E88 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C061245A2861F0AF0096DC88 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C0814A1C2863093F0085AB3F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -88,11 +96,29 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		C04CF3122865DB1A000F4A68 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C056C1BB2862021000265E88 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C04CF3132865E26F000F4A68 /* PopularCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C04CF3142865E3CA000F4A68 /* PopularCollectionViewCell.swift */,
+				C04CF3152865E3CA000F4A68 /* PopularCollectionViewCell.xib */,
+			);
+			path = PopularCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		C0814A19286308BA0085AB3F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C0814A21286310140085AB3F /* OnBoardingSlide.swift */,
 				C0814A2F286361EB0085AB3F /* Country.swift */,
+				C04CF3182865E614000F4A68 /* Trip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -100,6 +126,7 @@
 		C0814A1A286308DD0085AB3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C04CF3122865DB1A000F4A68 /* Settings */,
 				C04CF30F2865D65F000F4A68 /* Login */,
 				C04CF30C2865D390000F4A68 /* TripDetail */,
 				C0814A25286351920085AB3F /* Home */,
@@ -122,6 +149,7 @@
 			children = (
 				C0814A1F28630ED60085AB3F /* UIView Extensions.swift */,
 				C0814A34286364C50085AB3F /* String Extensions.swift */,
+				C04CF3102865D890000F4A68 /* UIViewControoler extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -130,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				C061245A2861F0AF0096DC88 /* HomeViewController.swift */,
-				C056C1BB2862021000265E88 /* SettingsViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -147,6 +174,7 @@
 		C0814A2728635EF70085AB3F /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C04CF3132865E26F000F4A68 /* PopularCollectionViewCell */,
 				C0814A2828635F420085AB3F /* CountriesCollectionViewCell */,
 			);
 			path = CollectionViewCells;
@@ -276,6 +304,7 @@
 				C0814A2E28635FE80085AB3F /* CountriesCollectionViewCell.xib in Resources */,
 				C086337E286071D400AF3F96 /* GoogleService-Info.plist in Resources */,
 				C086337328606FDF00AF3F96 /* Assets.xcassets in Resources */,
+				C04CF3172865E3CA000F4A68 /* PopularCollectionViewCell.xib in Resources */,
 				C086337128606FDE00AF3F96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +318,9 @@
 			files = (
 				C086336E28606FDE00AF3F96 /* LoginViewController.swift in Sources */,
 				C0814A1D2863093F0085AB3F /* OnboardingViewController.swift in Sources */,
+				C04CF3112865D890000F4A68 /* UIViewControoler extension.swift in Sources */,
 				C086336A28606FDE00AF3F96 /* AppDelegate.swift in Sources */,
+				C04CF3162865E3CA000F4A68 /* PopularCollectionViewCell.swift in Sources */,
 				C086336C28606FDE00AF3F96 /* SceneDelegate.swift in Sources */,
 				C0814A22286310140085AB3F /* OnBoardingSlide.swift in Sources */,
 				C0814A35286364C50085AB3F /* String Extensions.swift in Sources */,
@@ -300,6 +331,7 @@
 				C0814A30286361EB0085AB3F /* Country.swift in Sources */,
 				C0814A2D28635FE80085AB3F /* CountriesCollectionViewCell.swift in Sources */,
 				C0814A2028630ED60085AB3F /* UIView Extensions.swift in Sources */,
+				C04CF3192865E614000F4A68 /* Trip.swift in Sources */,
 				C0814A24286313150085AB3F /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
