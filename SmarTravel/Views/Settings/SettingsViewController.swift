@@ -28,10 +28,8 @@ class SettingsViewController: UIViewController {
         
         do {
             try FirebaseAuth.Auth.auth().signOut()
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            if let loginVC = mainStoryboard.instantiateViewController(withIdentifier: "login_vc") as? LoginViewController {
-                self.present(loginVC, animated: true, completion: nil)
-            }
+            let controller = LoginViewController.instantiate()
+            self.present(controller, animated: true, completion: nil)
         }
         catch {
             print("An error occurred when logging out")

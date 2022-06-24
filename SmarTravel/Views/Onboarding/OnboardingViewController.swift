@@ -57,11 +57,8 @@ class OnboardingViewController: UIViewController {
     
     @IBAction func nextBTNClicked(_ sender: Any) {
         if currentPage == slides.count - 1 {
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            if let loginVC = mainStoryboard.instantiateViewController(withIdentifier: "login_vc") as? LoginViewController {
-                loginVC.modalTransitionStyle = .flipHorizontal
-                self.present(loginVC, animated: true, completion: nil)
-            }
+            let controller = LoginViewController.instantiate()
+            self.present(controller, animated: true, completion: nil)
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)

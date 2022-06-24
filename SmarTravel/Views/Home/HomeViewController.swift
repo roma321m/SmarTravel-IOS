@@ -22,6 +22,16 @@ class HomeViewController: UIViewController {
         soldOut = Trips.trips // TODO: get from API
     }
     
+    @IBAction func settingsClicked(_ sender: Any) {
+        let controller = SettingsViewController.instantiate()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @IBAction func profileClicked(_ sender: Any) {
+        // TODO: added profile clieck action
+    }
+    
+    
     private func initCollectionViews() {
         countriesCollectionView.delegate = self
         countriesCollectionView.dataSource = self
@@ -69,6 +79,22 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.setup(soldOut[indexPath.row])
             return cell
         default: return UICollectionViewCell()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView {
+        case countriesCollectionView:
+            print() //TODO: open the relevet page of trip list by country
+        case popularCollectionView:
+            let controller = TripDetailViewController.instantiate()
+            controller.trip = trips[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
+        case soldOutCollectionView:
+            let controller = TripDetailViewController.instantiate()
+            controller.trip = soldOut[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
+        default: print()
         }
     }
 }
