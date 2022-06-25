@@ -3,29 +3,18 @@ import FirebaseAuth
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var signOutButtom: UIBarButtonItem!
+    
     // MARK: - View life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Settings"
-        
-        navigationController?.navigationBar.tintColor = UIColor(named: "secondaryColor")
-        
-        configureItems()
     }
     
     //MARK: - View methods
-
-    private func configureItems() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            title: "Sign Out",
-            style: .done,
-            target: self,
-            action: #selector(signOut))
-    }
-
-    @objc func signOut() {
-        
+    
+    @IBAction func signOutClicked(_ sender: Any) {
         do {
             try FirebaseAuth.Auth.auth().signOut()
             let controller = LoginViewController.instantiate()
@@ -34,6 +23,5 @@ class SettingsViewController: UIViewController {
         catch {
             print("An error occurred when logging out")
         }
-        
     }
 }

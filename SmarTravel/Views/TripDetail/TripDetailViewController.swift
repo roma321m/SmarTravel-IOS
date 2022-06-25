@@ -11,6 +11,7 @@ class TripDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Trip Details"
         populateView()
     }
     

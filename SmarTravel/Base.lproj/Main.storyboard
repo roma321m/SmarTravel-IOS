@@ -206,6 +206,7 @@
                             <constraint firstItem="6Rv-aV-Lzm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zfz-Wd-aRK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="AYa-5r-urB"/>
                     <connections>
                         <outlet property="login_BTN_continue" destination="Ee9-cR-vMp" id="1L6-xx-b6e"/>
                         <outlet property="login_TF_email" destination="pwt-mr-k9t" id="ta0-Ix-Jlg"/>
@@ -214,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="-587"/>
+            <point key="canvasLocation" x="1843" y="-586"/>
         </scene>
         <!--Trips View Controller-->
         <scene sceneID="XfO-rf-ZWp">
@@ -252,7 +253,7 @@
                                                             <size key="itemSize" width="115" height="70"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="40" maxY="0.0"/>
+                                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="60" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells/>
                                                     </collectionView>
@@ -290,7 +291,7 @@
                                                             <size key="itemSize" width="115" height="70"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="40" maxY="0.0"/>
+                                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="80" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells/>
                                                     </collectionView>
@@ -328,7 +329,7 @@
                                                             <size key="itemSize" width="115" height="70"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="40" maxY="0.0"/>
+                                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="80" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells/>
                                                     </collectionView>
@@ -372,6 +373,7 @@
                             <color key="tintColor" name="secondaryColor"/>
                             <connections>
                                 <action selector="settingsClicked:" destination="fgZ-fX-O5S" id="irP-b2-6bH"/>
+                                <segue destination="u2E-EJ-WT7" kind="show" id="BET-q4-Z1Y"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" id="Hlz-ej-74a">
@@ -422,7 +424,7 @@
             </objects>
             <point key="canvasLocation" x="3191" y="95"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="vhd-Qg-2ik">
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" modalPresentationStyle="fullScreen" id="u2E-EJ-WT7" customClass="SettingsViewController" customModule="SmarTravel" customModuleProvider="target" sceneMemberID="viewController">
@@ -432,10 +434,21 @@
                         <viewLayoutGuide key="safeArea" id="gAk-ef-sc9"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="92I-wF-Bir">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="Y2u-ZB-FQs">
+                            <color key="tintColor" name="secondaryColor"/>
+                            <connections>
+                                <action selector="signOutClicked:" destination="u2E-EJ-WT7" id="tK1-uC-pMH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="signOutButtom" destination="Y2u-ZB-FQs" id="xsq-yt-zrM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIo-uP-jXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3831" y="96"/>
+            <point key="canvasLocation" x="1773" y="816"/>
         </scene>
         <!--Trip Detail View Controller-->
         <scene sceneID="Eer-rr-HzH">
@@ -535,6 +548,7 @@
             <objects>
                 <navigationController storyboardIdentifier="UINavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="sy8-52-zyO" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="OTS-ez-gvN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bqT-Fa-zvt">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -546,7 +560,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rpc-o1-yaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072" y="96"/>
+            <point key="canvasLocation" x="1043" y="95"/>
         </scene>
     </scenes>
     <resources>
