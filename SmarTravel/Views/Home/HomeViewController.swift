@@ -31,7 +31,6 @@ class HomeViewController: UIViewController {
         // TODO: added profile clieck action
     }
     
-    
     private func initCollectionViews() {
         countriesCollectionView.delegate = self
         countriesCollectionView.dataSource = self
@@ -85,7 +84,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch collectionView {
         case countriesCollectionView:
-            print() //TODO: open the relevet page of trip list by country
+            let controller = CountryViewController.instantiate()
+            controller.countyName = countries[indexPath.row].name
+            controller.trips = trips // TODO: sort the list only for the selected country
+            navigationController?.pushViewController(controller, animated: true)
         case popularCollectionView:
             let controller = TripDetailViewController.instantiate()
             controller.trip = trips[indexPath.row]

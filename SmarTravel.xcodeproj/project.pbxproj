@@ -36,6 +36,9 @@
 		C08633812860726300AF3F96 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C08633802860726300AF3F96 /* FirebaseAnalytics */; };
 		C08633832860726300AF3F96 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C08633822860726300AF3F96 /* FirebaseAuth */; };
 		C08633852860726300AF3F96 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C08633842860726300AF3F96 /* FirebaseFirestore */; };
+		C091EDED28671B0F00D848F8 /* TripListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C091EDEB28671B0F00D848F8 /* TripListTableViewCell.swift */; };
+		C091EDEE28671B0F00D848F8 /* TripListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C091EDEC28671B0F00D848F8 /* TripListTableViewCell.xib */; };
+		C091EDF128671E9800D848F8 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C091EDF028671E9800D848F8 /* CountryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,9 @@
 		C086337728606FDF00AF3F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C086337D286071D400AF3F96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C086338628607D6500AF3F96 /* SmarTravelDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmarTravelDebug.entitlements; sourceTree = "<group>"; };
+		C091EDEB28671B0F00D848F8 /* TripListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewCell.swift; sourceTree = "<group>"; };
+		C091EDEC28671B0F00D848F8 /* TripListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListTableViewCell.xib; sourceTree = "<group>"; };
+		C091EDF028671E9800D848F8 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 		C0814A1A286308DD0085AB3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C091EDEF28671E5C00D848F8 /* CountryViewController */,
 				C04CF3122865DB1A000F4A68 /* Settings */,
 				C04CF30F2865D65F000F4A68 /* Login */,
 				C04CF30C2865D390000F4A68 /* TripDetail */,
@@ -178,6 +185,7 @@
 		C0814A2628635ED70085AB3F /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				C091EDE928671A9B00D848F8 /* TableViewCells */,
 				C0814A36286370A30085AB3F /* CardView */,
 				C0814A2728635EF70085AB3F /* CollectionViewCells */,
 			);
@@ -244,6 +252,31 @@
 				C086337D286071D400AF3F96 /* GoogleService-Info.plist */,
 			);
 			path = SmarTravel;
+			sourceTree = "<group>";
+		};
+		C091EDE928671A9B00D848F8 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C091EDEA28671AC200D848F8 /* TripListTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		C091EDEA28671AC200D848F8 /* TripListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C091EDEB28671B0F00D848F8 /* TripListTableViewCell.swift */,
+				C091EDEC28671B0F00D848F8 /* TripListTableViewCell.xib */,
+			);
+			path = TripListTableViewCell;
+			sourceTree = "<group>";
+		};
+		C091EDEF28671E5C00D848F8 /* CountryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C091EDF028671E9800D848F8 /* CountryViewController.swift */,
+			);
+			path = CountryViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C091EDEE28671B0F00D848F8 /* TripListTableViewCell.xib in Resources */,
 				C04CF3202865F10F000F4A68 /* SoldOutCollectionViewCell.xib in Resources */,
 				C086337628606FDF00AF3F96 /* LaunchScreen.storyboard in Resources */,
 				C0814A2E28635FE80085AB3F /* CountriesCollectionViewCell.xib in Resources */,
@@ -337,12 +371,14 @@
 				C086336A28606FDE00AF3F96 /* AppDelegate.swift in Sources */,
 				C04CF3162865E3CA000F4A68 /* PopularCollectionViewCell.swift in Sources */,
 				C086336C28606FDE00AF3F96 /* SceneDelegate.swift in Sources */,
+				C091EDED28671B0F00D848F8 /* TripListTableViewCell.swift in Sources */,
 				C0814A22286310140085AB3F /* OnBoardingSlide.swift in Sources */,
 				C0814A35286364C50085AB3F /* String Extensions.swift in Sources */,
 				C056C1BC2862021000265E88 /* SettingsViewController.swift in Sources */,
 				C04CF31F2865F10F000F4A68 /* SoldOutCollectionViewCell.swift in Sources */,
 				C0814A38286370C50085AB3F /* CardView.swift in Sources */,
 				C04CF30E2865D3D5000F4A68 /* TripDetailViewController.swift in Sources */,
+				C091EDF128671E9800D848F8 /* CountryViewController.swift in Sources */,
 				C061245B2861F0AF0096DC88 /* HomeViewController.swift in Sources */,
 				C0814A30286361EB0085AB3F /* Country.swift in Sources */,
 				C0814A2D28635FE80085AB3F /* CountriesCollectionViewCell.swift in Sources */,
