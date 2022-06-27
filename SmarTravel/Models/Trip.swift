@@ -1,6 +1,6 @@
 import Foundation
 
-struct Trip {
+struct Trip: Decodable {
     let id, name, description, image: String?
     let price: Double?
     

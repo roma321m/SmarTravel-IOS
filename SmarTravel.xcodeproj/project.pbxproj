@@ -26,6 +26,11 @@
 		C0814A33286363D00085AB3F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C0814A32286363D00085AB3F /* Kingfisher */; };
 		C0814A35286364C50085AB3F /* String Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0814A34286364C50085AB3F /* String Extensions.swift */; };
 		C0814A38286370C50085AB3F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0814A37286370C50085AB3F /* CardView.swift */; };
+		C08611E92869AF11006CC7B7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08611E82869AF11006CC7B7 /* NetworkService.swift */; };
+		C08611EB2869B187006CC7B7 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08611EA2869B187006CC7B7 /* Route.swift */; };
+		C08611ED2869B1AF006CC7B7 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08611EC2869B1AF006CC7B7 /* Method.swift */; };
+		C08611EF2869BA12006CC7B7 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08611EE2869BA12006CC7B7 /* AppError.swift */; };
+		C08611F12869C164006CC7B7 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08611F02869C164006CC7B7 /* ApiResponse.swift */; };
 		C086336A28606FDE00AF3F96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086336928606FDE00AF3F96 /* AppDelegate.swift */; };
 		C086336C28606FDE00AF3F96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086336B28606FDE00AF3F96 /* SceneDelegate.swift */; };
 		C086336E28606FDE00AF3F96 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086336D28606FDE00AF3F96 /* LoginViewController.swift */; };
@@ -61,6 +66,11 @@
 		C0814A2F286361EB0085AB3F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		C0814A34286364C50085AB3F /* String Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String Extensions.swift"; sourceTree = "<group>"; };
 		C0814A37286370C50085AB3F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C08611E82869AF11006CC7B7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C08611EA2869B187006CC7B7 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		C08611EC2869B1AF006CC7B7 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		C08611EE2869BA12006CC7B7 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		C08611F02869C164006CC7B7 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		C086336628606FDE00AF3F96 /* SmarTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmarTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C086336928606FDE00AF3F96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C086336B28606FDE00AF3F96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +232,18 @@
 			path = CardView;
 			sourceTree = "<group>";
 		};
+		C08611E72869A908006CC7B7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C08611E82869AF11006CC7B7 /* NetworkService.swift */,
+				C08611EA2869B187006CC7B7 /* Route.swift */,
+				C08611EC2869B1AF006CC7B7 /* Method.swift */,
+				C08611EE2869BA12006CC7B7 /* AppError.swift */,
+				C08611F02869C164006CC7B7 /* ApiResponse.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		C086335D28606FDE00AF3F96 = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +263,7 @@
 		C086336828606FDE00AF3F96 /* SmarTravel */ = {
 			isa = PBXGroup;
 			children = (
+				C08611E72869A908006CC7B7 /* Networking */,
 				C0814A2628635ED70085AB3F /* CustomViews */,
 				C0814A1E28630E9C0085AB3F /* Extensions */,
 				C0814A1A286308DD0085AB3F /* Views */,
@@ -376,20 +399,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C08611E92869AF11006CC7B7 /* NetworkService.swift in Sources */,
 				C086336E28606FDE00AF3F96 /* LoginViewController.swift in Sources */,
 				C0814A1D2863093F0085AB3F /* OnboardingViewController.swift in Sources */,
 				C04CF3112865D890000F4A68 /* UIViewController Extension.swift in Sources */,
 				C086336A28606FDE00AF3F96 /* AppDelegate.swift in Sources */,
+				C08611F12869C164006CC7B7 /* ApiResponse.swift in Sources */,
 				C04CF3162865E3CA000F4A68 /* PopularCollectionViewCell.swift in Sources */,
 				C086336C28606FDE00AF3F96 /* SceneDelegate.swift in Sources */,
 				C091EDED28671B0F00D848F8 /* TripListTableViewCell.swift in Sources */,
+				C08611ED2869B1AF006CC7B7 /* Method.swift in Sources */,
 				C0814A22286310140085AB3F /* OnBoardingSlide.swift in Sources */,
+				C08611EB2869B187006CC7B7 /* Route.swift in Sources */,
 				C0814A35286364C50085AB3F /* String Extensions.swift in Sources */,
 				C056C1BC2862021000265E88 /* SettingsViewController.swift in Sources */,
 				C04CF31F2865F10F000F4A68 /* SoldOutCollectionViewCell.swift in Sources */,
 				C0814A38286370C50085AB3F /* CardView.swift in Sources */,
 				C04CF30E2865D3D5000F4A68 /* TripDetailViewController.swift in Sources */,
 				C091EDF128671E9800D848F8 /* CountryViewController.swift in Sources */,
+				C08611EF2869BA12006CC7B7 /* AppError.swift in Sources */,
 				C061245B2861F0AF0096DC88 /* HomeViewController.swift in Sources */,
 				C0814A30286361EB0085AB3F /* Country.swift in Sources */,
 				C0814A2D28635FE80085AB3F /* CountriesCollectionViewCell.swift in Sources */,

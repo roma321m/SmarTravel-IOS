@@ -15,6 +15,15 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NetworkService.singleInstance.tempRequest { (result) in
+            switch result {
+            case .success(let data):
+                print ("The decoded data to string is: \n\(data)")
+            case .failure(let error):
+                print("The error is: \n\(error.localizedDescription)")
+            }
+        } // REMOVE: temp test
+        
         initCollectionViews()
         
         countries = Countries.countries // TODO: get this from API
