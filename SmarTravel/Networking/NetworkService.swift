@@ -6,8 +6,12 @@ struct NetworkService {
     
     private init() {}
     
-    func tempRequest(completion: @escaping(Result<Trip, Error>) -> Void) {
-        request(route: .temp, method: .get, completion: completion)
+    func fetchAllCountries(completion: @escaping(Result<[Country], Error>) -> Void) {
+        request(route: .fetchAllCountries, method: .get, completion: completion)
+    }
+    
+    func fetchAllTrips(completion: @escaping(Result<[Trip], Error>) -> Void) {
+        request(route: .fetchAllTrips, method: .get, completion: completion)
     }
     
     /// This function helps to make a new request to the server

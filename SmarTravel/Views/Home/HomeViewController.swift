@@ -8,6 +8,7 @@ class HomeViewController: UIViewController {
     
     var countries: [Country] = []
     var trips: [Trip] = []
+    var popularTrips: [Trip] = []
     var soldOut: [Trip] = []
     
     //MARK: - View life cycle
@@ -15,20 +16,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkService.singleInstance.tempRequest { (result) in
-            switch result {
-            case .success(let data):
-                print ("The decoded data to string is: \n\(data)")
-            case .failure(let error):
-                print("The error is: \n\(error.localizedDescription)")
-            }
-        } // REMOVE: temp test
-        
         initCollectionViews()
         
-        countries = Countries.countries // TODO: get this from API
-        trips = Trips.trips // TODO: get from API
-        soldOut = Trips.trips // TODO: get from API
+        fetchInitialData()
     }
     
     @IBAction func profileClicked(_ sender: Any) {
@@ -40,6 +30,32 @@ class HomeViewController: UIViewController {
     @IBAction func settingsClicked(_ sender: Any) {
         let controller = SettingsViewController.instantiate()
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    private func fetchInitialData() {
+        NetworkService.singleInstance.fetchAllCountries { (result) in
+            switch result {
+            case .success(let data):
+                self.countries = data
+                self.countriesCollectionView.reloadData()
+                print ("The decoded data to string is: \n\(data)")
+            case .failure(let error):
+                print("The error is: \n\(error.localizedDescription)")
+            }
+        }
+        NetworkService.singleInstance.fetchAllTrips { (result) in
+            switch result {
+            case .success(let data):
+                self.trips = data
+                self.soldOut = self.trips // FIXME: sort by sold out
+                self.popularTrips = self.trips // FIXME: sort by popular
+                self.popularCollectionView.reloadData()
+                self.soldOutCollectionView.reloadData()
+                print ("The decoded data to string is: \n\(data)")
+            case .failure(let error):
+                print("The error is: \n\(error.localizedDescription)")
+            }
+        }
     }
     
     private func initCollectionViews() {
