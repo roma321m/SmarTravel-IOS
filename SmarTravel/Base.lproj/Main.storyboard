@@ -372,14 +372,13 @@
                         <barButtonItem key="leftBarButtonItem" image="gearshape.fill" catalog="system" id="bjc-pm-DL1">
                             <color key="tintColor" name="secondaryColor"/>
                             <connections>
-                                <action selector="settingsClicked:" destination="fgZ-fX-O5S" id="irP-b2-6bH"/>
-                                <segue destination="u2E-EJ-WT7" kind="show" id="BET-q4-Z1Y"/>
+                                <action selector="settingsClicked:" destination="fgZ-fX-O5S" id="y1q-oR-pGb"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" id="Hlz-ej-74a">
                             <color key="tintColor" name="secondaryColor"/>
                             <connections>
-                                <action selector="profileClicked:" destination="fgZ-fX-O5S" id="u1v-f3-UUS"/>
+                                <action selector="profileClicked:" destination="fgZ-fX-O5S" id="udA-B1-DOh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -435,6 +434,9 @@
                         <color key="backgroundColor" name="backgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="92I-wF-Bir">
+                        <barButtonItem key="backBarButtonItem" title="Trips" id="asx-L2-7J4">
+                            <color key="tintColor" name="secondaryColor"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Sign Out" id="Y2u-ZB-FQs">
                             <color key="tintColor" name="secondaryColor"/>
                             <connections>
@@ -448,7 +450,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIo-uP-jXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1773" y="816"/>
+            <point key="canvasLocation" x="1166" y="827"/>
+        </scene>
+        <!--My Trips-->
+        <scene sceneID="aFQ-Z3-qti">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="P1o-9u-rJa" customClass="ProfileViewController" customModule="SmarTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M6d-ie-KM1">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4vq-52-Vfg">
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5eG-4D-9vj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4vq-52-Vfg" firstAttribute="leading" secondItem="5eG-4D-9vj" secondAttribute="leading" id="9jV-fX-MST"/>
+                            <constraint firstItem="4vq-52-Vfg" firstAttribute="top" secondItem="5eG-4D-9vj" secondAttribute="top" id="GaQ-ji-TX8"/>
+                            <constraint firstItem="5eG-4D-9vj" firstAttribute="trailing" secondItem="4vq-52-Vfg" secondAttribute="trailing" id="q39-43-l0z"/>
+                            <constraint firstItem="5eG-4D-9vj" firstAttribute="bottom" secondItem="4vq-52-Vfg" secondAttribute="bottom" id="yj4-eO-hhN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Trips" id="Zko-lT-Ydj"/>
+                    <connections>
+                        <outlet property="tripsTableView" destination="4vq-52-Vfg" id="1Ug-Lm-d0R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXD-Wm-v1G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897" y="827"/>
         </scene>
         <!--Trip Detail View Controller-->
         <scene sceneID="Eer-rr-HzH">

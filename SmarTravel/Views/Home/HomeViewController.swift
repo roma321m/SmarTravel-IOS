@@ -22,13 +22,15 @@ class HomeViewController: UIViewController {
         soldOut = Trips.trips // TODO: get from API
     }
     
-    @IBAction func settingsClicked(_ sender: Any) {
-        let controller = SettingsViewController.instantiate()
+    @IBAction func profileClicked(_ sender: Any) {
+        let controller = ProfileViewController.instantiate()
+        controller.trips = trips //FIXME: change to actual user trips list
         navigationController?.pushViewController(controller, animated: true)
     }
     
-    @IBAction func profileClicked(_ sender: Any) {
-        // TODO: added profile clieck action
+    @IBAction func settingsClicked(_ sender: Any) {
+        let controller = SettingsViewController.instantiate()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     private func initCollectionViews() {

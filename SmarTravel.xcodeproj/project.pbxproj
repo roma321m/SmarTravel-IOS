@@ -39,6 +39,7 @@
 		C091EDED28671B0F00D848F8 /* TripListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C091EDEB28671B0F00D848F8 /* TripListTableViewCell.swift */; };
 		C091EDEE28671B0F00D848F8 /* TripListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C091EDEC28671B0F00D848F8 /* TripListTableViewCell.xib */; };
 		C091EDF128671E9800D848F8 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C091EDF028671E9800D848F8 /* CountryViewController.swift */; };
+		C091EDF428672FBA00D848F8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C091EDF328672FBA00D848F8 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		C091EDEB28671B0F00D848F8 /* TripListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewCell.swift; sourceTree = "<group>"; };
 		C091EDEC28671B0F00D848F8 /* TripListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListTableViewCell.xib; sourceTree = "<group>"; };
 		C091EDF028671E9800D848F8 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		C091EDF328672FBA00D848F8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		C0814A1A286308DD0085AB3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C091EDF228672F9B00D848F8 /* ProfileViewController */,
 				C091EDEF28671E5C00D848F8 /* CountryViewController */,
 				C04CF3122865DB1A000F4A68 /* Settings */,
 				C04CF30F2865D65F000F4A68 /* Login */,
@@ -279,6 +282,14 @@
 			path = CountryViewController;
 			sourceTree = "<group>";
 		};
+		C091EDF228672F9B00D848F8 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C091EDF328672FBA00D848F8 /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,6 +394,7 @@
 				C0814A30286361EB0085AB3F /* Country.swift in Sources */,
 				C0814A2D28635FE80085AB3F /* CountriesCollectionViewCell.swift in Sources */,
 				C0814A2028630ED60085AB3F /* UIView Extensions.swift in Sources */,
+				C091EDF428672FBA00D848F8 /* ProfileViewController.swift in Sources */,
 				C04CF3192865E614000F4A68 /* Trip.swift in Sources */,
 				C0814A24286313150085AB3F /* OnboardingCollectionViewCell.swift in Sources */,
 			);
