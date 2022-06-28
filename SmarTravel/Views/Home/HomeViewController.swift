@@ -47,8 +47,8 @@ class HomeViewController: UIViewController {
             switch result {
             case .success(let data):
                 self.trips = data
-                self.soldOut = self.trips // FIXME: sort by sold out
-                self.popularTrips = self.trips // FIXME: sort by popular
+                self.soldOut = self.getSoldOut()
+                self.popularTrips = self.getPopular()
                 self.popularCollectionView.reloadData()
                 self.soldOutCollectionView.reloadData()
                 print ("The decoded data to string is: \n\(data)")
@@ -74,6 +74,36 @@ class HomeViewController: UIViewController {
         popularCollectionView.register(UINib(nibName: PopularCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: PopularCollectionViewCell.identifier)
         soldOutCollectionView.register(UINib(nibName: SoldOutCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: SoldOutCollectionViewCell.identifier)
     }
+    
+    private func getSoldOut() -> [Trip] {
+        var array: [Trip] = []
+        for t in trips {
+            if t.soldOut ?? false {
+                array.append(t)
+            }
+        }
+        return array
+    }
+    
+    private func getPopular() -> [Trip] {
+        var array: [Trip] = []
+        for t in trips {
+            if t.popular ?? false {
+                array.append(t)
+            }
+        }
+        return array
+    }
+    
+    private func getCountryTrips(id: String) -> [Trip] {
+        var array: [Trip] = []
+        for t in trips {
+            if t.countryId == id {
+                array.append(t)
+            }
+        }
+        return array
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -83,7 +113,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case countriesCollectionView:
             return countries.count
         case popularCollectionView:
-            return trips.count
+            return popularTrips.count
         case soldOutCollectionView:
             return soldOut.count
         default: return 0
@@ -98,7 +128,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         case popularCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.identifier, for: indexPath) as! PopularCollectionViewCell
-            cell.setup(trips[indexPath.row])
+            cell.setup(popularTrips[indexPath.row])
             return cell
         case soldOutCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SoldOutCollectionViewCell.identifier, for: indexPath) as! SoldOutCollectionViewCell
@@ -113,11 +143,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case countriesCollectionView:
             let controller = CountryViewController.instantiate()
             controller.countyName = countries[indexPath.row].name
-            controller.trips = trips // TODO: sort the list only for the selected country
+            controller.trips = getCountryTrips(id: countries[indexPath.row].id)
             navigationController?.pushViewController(controller, animated: true)
         case popularCollectionView:
             let controller = TripDetailViewController.instantiate()
-            controller.trip = trips[indexPath.row]
+            controller.trip = popularTrips[indexPath.row]
             navigationController?.pushViewController(controller, animated: true)
         case soldOutCollectionView:
             let controller = TripDetailViewController.instantiate()

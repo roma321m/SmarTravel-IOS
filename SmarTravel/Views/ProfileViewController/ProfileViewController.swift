@@ -11,7 +11,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = userEmail //FIXME: firebase user email
+        title = "My Trips"
         initTableView()
     }
     

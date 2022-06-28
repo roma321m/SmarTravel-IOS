@@ -12,26 +12,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularCollectionViewCell" id="gTV-IL-0wX" customClass="PopularCollectionViewCell" customModule="SmarTravel" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="180" height="300"/>
+            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="180" height="300"/>
+                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKY-Ot-XnS" customClass="CardView" customModule="SmarTravel" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="180" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2aM-ty-C8q">
-                                <rect key="frame" x="8" y="8" width="164" height="284"/>
+                                <rect key="frame" x="8" y="8" width="184" height="284"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOG-WX-hvg">
-                                        <rect key="frame" x="0.0" y="0.0" width="164" height="21.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOG-WX-hvg">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZU2-hn-q54">
-                                        <rect key="frame" x="0.0" y="29.5" width="164" height="207"/>
+                                        <rect key="frame" x="0.0" y="29.5" width="184" height="207"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
@@ -39,13 +39,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pq-L2-TX2">
-                                        <rect key="frame" x="0.0" y="244.5" width="164" height="14.5"/>
+                                        <rect key="frame" x="0.0" y="244.5" width="184" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" name="mainColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pa4-EM-l3g">
-                                        <rect key="frame" x="0.0" y="267" width="164" height="17"/>
+                                        <rect key="frame" x="0.0" y="267" width="184" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                             <constraint firstItem="2aM-ty-C8q" firstAttribute="top" secondItem="eKY-Ot-XnS" secondAttribute="top" constant="8" id="1YY-hE-m8V"/>
                             <constraint firstAttribute="height" constant="300" id="7rJ-uw-7Mt"/>
                             <constraint firstItem="2aM-ty-C8q" firstAttribute="leading" secondItem="eKY-Ot-XnS" secondAttribute="leading" constant="8" id="CMq-FA-mtb"/>
-                            <constraint firstAttribute="width" constant="180" id="EiB-QQ-SAV"/>
+                            <constraint firstAttribute="width" constant="200" id="EiB-QQ-SAV"/>
                             <constraint firstAttribute="trailing" secondItem="2aM-ty-C8q" secondAttribute="trailing" constant="8" id="xK0-nN-Dra"/>
                         </constraints>
                     </view>
@@ -72,13 +72,14 @@
                 <constraint firstAttribute="bottom" secondItem="eKY-Ot-XnS" secondAttribute="bottom" id="TeN-Fo-U2N"/>
                 <constraint firstItem="eKY-Ot-XnS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zBF-Vk-B7l"/>
             </constraints>
+            <size key="customSize" width="200" height="300"/>
             <connections>
                 <outlet property="descriptionLable" destination="Pa4-EM-l3g" id="4UQ-M1-Sgl"/>
                 <outlet property="priceLable" destination="7Pq-L2-TX2" id="GZQ-97-4Hi"/>
                 <outlet property="titleLable" destination="aOG-WX-hvg" id="XOn-LO-llx"/>
                 <outlet property="tripImageView" destination="ZU2-hn-q54" id="1U8-j0-Dil"/>
             </connections>
-            <point key="canvasLocation" x="139" y="103"/>
+            <point key="canvasLocation" x="152.17391304347828" y="102.45535714285714"/>
         </collectionViewCell>
     </objects>
     <resources>

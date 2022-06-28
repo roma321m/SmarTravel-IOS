@@ -31,16 +31,15 @@ class OnboardingViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        // TODO: set actual data here
-        slides = [OnBoardingSlide(title: "The First Title Here",
-                                  description: "Description of the first page will be here!",
-                                  image: #imageLiteral(resourceName: "logo2")),
-                  OnBoardingSlide(title: "The Second Title Here",
-                                  description: "Description of the second page will be here!",
-                                  image: #imageLiteral(resourceName: "logo2")),
-                  OnBoardingSlide(title: "The Third Title Here",
-                                  description: "Description of the third page will be here!",
-                                  image: #imageLiteral(resourceName: "logo2"))]
+        slides = [OnBoardingSlide(title: "Welcome to SmarTravel",
+                                  description: "Here you can find the best trips worldwide!",
+                                  image: #imageLiteral(resourceName: "splash")),
+                  OnBoardingSlide(title: "You can find your next trip in a few steps",
+                                  description: "With our new home page design it is easy to see all the popular trips and sort by your destination country",
+                                  image: #imageLiteral(resourceName: "homepage")),
+                  OnBoardingSlide(title: "Find your upcoming trips",
+                                  description: "You can see all your upcoming trips in your prifile page",
+                                  image: #imageLiteral(resourceName: "my trips"))]
         
         pageControl.numberOfPages = slides.count
     }
