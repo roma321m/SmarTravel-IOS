@@ -148,10 +148,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case popularCollectionView:
             let controller = TripDetailViewController.instantiate()
             controller.trip = popularTrips[indexPath.row]
+            controller.showButton = true
             navigationController?.pushViewController(controller, animated: true)
         case soldOutCollectionView:
             let controller = TripDetailViewController.instantiate()
             controller.trip = soldOut[indexPath.row]
+            controller.showButton = false
             navigationController?.pushViewController(controller, animated: true)
         default: print()
         }

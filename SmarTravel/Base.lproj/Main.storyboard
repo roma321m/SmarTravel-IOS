@@ -566,6 +566,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="placeOrderButton" destination="KqB-Z9-cd7" id="xOa-ag-N6N"/>
                         <outlet property="tripDescriptionLable" destination="3zy-N9-ucR" id="Dzp-zQ-SA6"/>
                         <outlet property="tripImageView" destination="oK5-WJ-uZN" id="qgg-MV-S8d"/>
                         <outlet property="tripPriceLable" destination="B7W-Z1-wGR" id="wWX-oD-My7"/>

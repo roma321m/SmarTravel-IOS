@@ -43,6 +43,11 @@ extension CountryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = TripDetailViewController.instantiate()
         controller.trip = trips[indexPath.row]
+        if trips[indexPath.row].soldOut ?? false {
+            controller.showButton = false
+        } else {
+            controller.showButton = true
+        }
         navigationController?.pushViewController(controller, animated: true)
     }
 }

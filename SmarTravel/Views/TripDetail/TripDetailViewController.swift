@@ -6,13 +6,21 @@ class TripDetailViewController: UIViewController {
     @IBOutlet weak var tripTitleLable: UILabel!
     @IBOutlet weak var tripPriceLable: UILabel!
     @IBOutlet weak var tripDescriptionLable: UILabel!
+    @IBOutlet weak var placeOrderButton: UIButton!
     
     var trip: Trip!
+    var showButton = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Trip Details"
         populateView()
+        
+        if !showButton {
+            placeOrderButton.isHidden = true
+        } else {
+            placeOrderButton.isHidden = false
+        }
     }
     
     private func populateView() {
@@ -23,7 +31,7 @@ class TripDetailViewController: UIViewController {
     }
     
     @IBAction func PlaceOrderClicked(_ sender: Any) {
-        
+        // TODO: make new list for my orders and save on the device
     }
     
 }
