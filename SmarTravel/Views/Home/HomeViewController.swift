@@ -23,7 +23,6 @@ class HomeViewController: UIViewController {
     
     @IBAction func profileClicked(_ sender: Any) {
         let controller = ProfileViewController.instantiate()
-        controller.trips = trips //FIXME: change to actual user trips list
         navigationController?.pushViewController(controller, animated: true)
     }
     

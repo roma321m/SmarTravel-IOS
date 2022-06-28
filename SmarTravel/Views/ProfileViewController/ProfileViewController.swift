@@ -19,12 +19,26 @@ class ProfileViewController: UIViewController {
         tripsTableView.delegate = self
         tripsTableView.dataSource = self
         
+        setData()
         registerCells()
     }
     
     private func registerCells() {
         tripsTableView.register(UINib(nibName: TripListTableViewCell.identifier, bundle: nil),
                                 forCellReuseIdentifier: TripListTableViewCell.identifier)
+    }
+    
+    private func setData() {
+        // read trips from defults
+        let defaults = UserDefaults.standard
+        if let data = defaults.data(forKey: "myTrips") {
+            do {
+                let decoder = JSONDecoder()
+                trips = try decoder.decode([Trip].self, from: data)
+            } catch {
+                print("Unable to Decode Notes (\(error))")
+            }
+        }
     }
 
 }

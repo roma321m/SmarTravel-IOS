@@ -31,7 +31,31 @@ class TripDetailViewController: UIViewController {
     }
     
     @IBAction func PlaceOrderClicked(_ sender: Any) {
-        // TODO: make new list for my orders and save on the device
+        var trips: [Trip] = []
+        let defaults = UserDefaults.standard
+        // read trips from defults
+        if let data = defaults.data(forKey: "myTrips") {
+            do {
+                let decoder = JSONDecoder()
+                trips = try decoder.decode([Trip].self, from: data)
+            } catch {
+                print("Unable to Decode Notes (\(error))")
+            }
+        }
+        // add new trip to the array
+        trips.append(trip)
+        // write trips to the defults
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(trips)
+            UserDefaults.standard.set(data, forKey: "myTrips")
+
+        } catch {
+            print("Unable to Encode Array of trips (\(error))")
+        }
+        
+        let controller = ProfileViewController.instantiate()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
 }

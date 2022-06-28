@@ -1,6 +1,6 @@
 import Foundation
 
-struct Trip: Decodable {
+struct Trip: Codable {
     let id, countryId, name, description, image: String?
     let price: Double?
     let tickets: Int?
