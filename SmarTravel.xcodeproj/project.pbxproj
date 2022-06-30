@@ -247,6 +247,7 @@
 		C086335D28606FDE00AF3F96 = {
 			isa = PBXGroup;
 			children = (
+				C0D9540A286DDE7600749641 /* Readme pictures */,
 				C086336828606FDE00AF3F96 /* SmarTravel */,
 				C086336728606FDE00AF3F96 /* Products */,
 			);
@@ -311,6 +312,13 @@
 				C091EDF328672FBA00D848F8 /* ProfileViewController.swift */,
 			);
 			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		C0D9540A286DDE7600749641 /* Readme pictures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Readme pictures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
